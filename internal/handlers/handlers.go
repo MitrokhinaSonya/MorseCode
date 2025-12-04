@@ -12,7 +12,7 @@ import (
 )
 
 func RootHandler(res http.ResponseWriter, req *http.Request) {
-	file, err := os.Open("../index.html")
+	file, err := os.Open("index.html")
 	if err != nil {
 		log.Println("ошибка при получении файла", err)
 		http.Error(res, "ошибка при чтении файла", http.StatusInternalServerError)
